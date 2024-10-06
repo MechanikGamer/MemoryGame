@@ -1,0 +1,30 @@
+.difficulty-selector {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  label {
+    font-size: 1.1rem;
+  }
+
+  select {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-left: 10px;
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+  }
+
+  select:hover {
+    background: var(--secondary-color);
+  }
+}

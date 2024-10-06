@@ -1,0 +1,25 @@
+.history {
+  h2 {
+    margin-top: 0;
+  }
+
+  p {
+    color: #f0f0f0;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+
+    p {
+      margin: 5px 0;
+    }
+  }
+}

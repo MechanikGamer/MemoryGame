@@ -1,34 +1,57 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import '@styles/components/App.scss'
 
-function App() {
-  const [count, setCount] = useState(0)
+import DifficultySelector from '@components/DifficultySelector'
+import GameBoard from '@components/GameBoard'
+import History from '@components/History'
+import Stats from '@components/Stats'
+import { useGameStore } from '@store/useGameStore'
+import React from 'react'
+
+const App: React.FC = () => {
+  const { gameStarted, setGameStarted, resetGame, paused, setPaused } = useGameStore()
+
+  const handleStartGame = () => {
+    setGameStarted(true)
+    resetGame()
+  }
+
+  const handleRestartGame = () => {
+    resetGame()
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="app">
+      {!gameStarted ? (
+        <div className="start-screen">
+          <h1>Welcome to the Memory Match Game</h1>
+          <DifficultySelector />
+          <button className="button start-button" onClick={handleStartGame}>
+            Start Game
+          </button>
+        </div>
+      ) : (
+        <>
+          <header className="header">
+            <h1>Memory Match Game</h1>
+            <div className="menu">
+              <button className="button" onClick={handleRestartGame}>
+                Restart
+              </button>
+              <button className="button" onClick={() => setPaused(!paused)}>
+                {paused ? 'Resume' : 'Pause'}
+              </button>
+            </div>
+            <Stats />
+          </header>
+          <main className="main-content">
+            <GameBoard />
+          </main>
+          <aside className="sidebar">
+            <History />
+          </aside>
+        </>
+      )}
+    </div>
   )
 }
 

@@ -1,0 +1,26 @@
+{
+    "singleQuote": true,
+    "semi": false,
+    "printWidth": 120,
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "bracketSpacing": true,
+    "bracketSameLine": false,
+    "arrowParens": "avoid",
+    "overrides": [
+      {
+        "files": "*.jsx",
+        "options": {
+          "singleQuote": true,
+          "semi": false,
+          "printWidth": 120,
+          "trailingComma": "all",
+          "tabWidth": 2,
+          "bracketSpacing": true,
+          "bracketSameLine": false,
+          "arrowParens": "avoid"
+        }
+      }
+    ]
+  }
+  
