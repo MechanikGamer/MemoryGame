@@ -1,7 +1,30 @@
 .game-board {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  display: grid;
+  gap: 15px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+@media (max-width: 768px) {
+  .game-board {
     gap: 10px;
-    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   }
-  
+}
+
+@media (max-width: 600px) {
+  .game-board {
+    gap: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .game-board {
+    gap: 6px;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+}

@@ -1,50 +1,117 @@
-# React + TypeScript + Vite
+# Memory Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple memory match game built with React, TypeScript, and Vite. Test your memory skills by matching pairs of images. Choose your difficulty level and see how quickly you can find all the matching pairs!
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Difficulty Levels:** Choose between Easy (8 pairs), Medium (12 pairs), and Hard (16 pairs).
+- **Responsive Design:** Optimized for both desktop and mobile devices.
+- **Game Statistics:** Track your attempts and time elapsed.
+- **Game History:** View your past game results.
+- **Pause and Restart:** Ability to pause or restart the game at any time.
+- **Animated Tiles:** Smooth flip animations when revealing tiles.
+- **Modal Notifications:** Receive a congratulatory modal upon winning.
 
-## Expanding the ESLint configuration
+## Demo
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+To run this project locally, follow these steps:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/MechanikGamer/MemoryGame.git
+   ```
+
+2. **Navigate to the project directory:**
+
+   ```bash
+   cd MemoryGame
+   ```
+
+3. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+4. **Start the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+5. **Open the application:**
+
+   Open your browser and navigate to `http://localhost:5173` (or the port specified in your terminal).
+
+## Build
+
+To build the project for production:
+
+```bash
+npm run build
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+The build files will be generated in the `dist` directory.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Linting and Formatting
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **Lint the code:**
+
+  ```bash
+  npm run lint
+  ```
+
+- **Format the code:**
+
+  ```bash
+  npm run format
+  ```
+
+## Technologies Used
+
+- **React** with **TypeScript**
+- **Vite** as the build tool
+- **Zustand** for state management
+- **SCSS** for styling
+- **ESLint** and **Prettier** for code quality
+
+## Contribution
+
+This project was developed in approximately 3 hours as a small task. While the core logic is functional, there's plenty of room for improvement in terms of features, optimization, and design enhancements.
+
+**Feel free to contribute if you'd like to improve the game!**
+
+To contribute:
+
+1. **Fork the repository.**
+2. **Create a new branch:**
+
+   ```bash
+   git checkout -b feature/YourFeatureName
+   ```
+
+3. **Make your changes and commit them:**
+
+   ```bash
+   git commit -m 'Add some feature'
+   ```
+
+4. **Push to the branch:**
+
+   ```bash
+   git push origin feature/YourFeatureName
+   ```
+
+5. **Open a pull request.**
+
+## License
+
+MIT License
+
+## Contact
+
+For any questions or suggestions, feel free to reach out.

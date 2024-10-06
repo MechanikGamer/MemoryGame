@@ -1,8 +1,13 @@
 .stats {
-    margin-bottom: 20px;
-  
-    p {
-      margin: 5px 0;
-    }
+  margin-bottom: 20px;
+  display: flex;
+  gap: 30px;
+  font-size: 1.2rem;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  p {
+    margin: 0;
   }
-  
+}
